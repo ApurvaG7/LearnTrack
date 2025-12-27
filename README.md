@@ -3,6 +3,7 @@ The project demonstrates OOP concepts, clean architecture, and in-memory data ha
 
 🎯 Key Features
 👨‍🎓 Student Management
+
 Add student (with or without email)
 View all students
 Search student by ID
