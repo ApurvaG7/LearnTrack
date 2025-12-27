@@ -1,4 +1,4 @@
-# LearnTrack – Student & Course Management System 
+# LearnTrack – Student & Course Management System
 
 This is a menu-driven console application built using Core Java to manage Students, Courses, Enrollments, and Trainers.
 The project demonstrates OOP concepts, clean architecture, and in-memory data handling.
