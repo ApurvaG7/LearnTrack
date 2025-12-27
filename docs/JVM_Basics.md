@@ -1,21 +1,19 @@
+# What is JDK, JRE, JVM?
 
-
-* What is JDK, JRE, JVM?
-
-JVM (Java Virtual Machine) is an abstract machine.
+**JVM** (Java Virtual Machine) is an abstract machine.
 
 It is a specification that provides a runtime environment in which Java bytecode can be executed. 
 
 It can also run those programs that are written in other languages and compiled to Java bytecode.
 
-JRE (Java Runtime Environment), It is also written as Java RTE. 
+**JRE** (Java Runtime Environment), It is also written as Java RTE. 
 It's a set of software tools that are used for developing Java applications. 
 
 It is used to provide the runtime environment. 
 
 It contains a set of libraries + other files that the JVM uses at runtime.
 
-JDK (Java Development Kit) is a software development environment that is used to develop Java applications and applets. 
+**JDK** (Java Development Kit) is a software development environment that is used to develop Java applications and applets. 
 
 It contains JRE + development tools.
 
@@ -25,7 +23,7 @@ It contains JRE + development tools.
 
 
 
-* What is bytecode?
+# What is bytecode?
 
 Java bytecode is a set of instructions of Java code that the JVM understands. 
 
@@ -39,7 +37,7 @@ Low-level and high-level sets of instructions are separated by bytecode.
 
 
 
-* What does “write once, run anywhere” mean?
+# What does “write once, run anywhere” mean?
 
 The key to this portability is the Java Virtual Machine (JVM) and the Java Runtime Environment (JRE).
 
@@ -51,7 +49,7 @@ Execution by JVM: Each target platform (e.g., Windows, macOS, Linux) has its own
 
 When the program is run, the JVM interprets or uses a Just-In-Time (JIT) compiler to translate the generic bytecode into the native machine code that the underlying hardware can understand and execute.
 
-Benefits
+**Benefits**
 
 The WORA principle offers significant advantages:
 
