@@ -10,7 +10,6 @@ The project demonstrates OOP concepts, clean architecture, and in-memory data ha
 * View all students
 
 * Search student by ID
-
 * Update student details
 
 Remove student
