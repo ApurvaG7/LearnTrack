@@ -13,14 +13,15 @@ public class CourseService {
 
     private final CourseRepository courseRepository = new CourseRepository();
 
-    public void addCourse(String courseName, String description, int durationInWeeks) {
-        InputValidator.validateName(courseName, "Course Name");
-        InputValidator.validatePositiveNumber(durationInWeeks, "Duration");
+    public void addCourse(String name, String desc, int duration, int trainerId) {
+        InputValidator.validateName(name, "Course Name");
+        InputValidator.validatePositiveNumber(duration, "Duration");
 
         int id = IdGenerator.getNextCourseId();
-        Course course = new Course(id, courseName, description, durationInWeeks);
+        Course course = new Course(id, name, desc, duration, trainerId);
         courseRepository.addCourse(course);
     }
+
 
     public List<Course> listCourses() {
         return courseRepository.getAllCourses();

@@ -9,6 +9,7 @@ public class Course {
     private String courseName;
     private String description;
     private int durationInWeeks;
+    private int trainerId;
     private boolean active;
     private CourseStatus status;
 
@@ -19,14 +20,15 @@ public class Course {
     }
 
     // Parameterized constructor
-    public Course(int id, String courseName, String description, int durationInWeeks) {
+    public Course(int id, String courseName, String description, int durationInWeeks, int trainerId) {
         this.id = id;
         this.courseName = courseName;
         this.description = description;
         this.durationInWeeks = durationInWeeks;
+        this.trainerId = trainerId;
         this.active = true;
-        this.status = CourseStatus.ACTIVE;
     }
+
 
     // Getters & Setters
 
@@ -61,6 +63,15 @@ public class Course {
     public void setDurationInWeeks(int durationInWeeks) {
         this.durationInWeeks = durationInWeeks;
     }
+
+    public int getTrainerId() {
+        return trainerId;
+    }
+
+    public void setTrainerId(int trainerId) {
+        this.trainerId = trainerId;
+    }
+
 
     public boolean isActive() {
         return active;

@@ -259,6 +259,13 @@ public class Main {
     // COURSE METHODS
 
     private static void addCourse() {
+        System.out.println("\nAvailable Trainers:");
+        for (Trainer t : trainerService.listTrainers()) {
+            System.out.println(t.getId() + " | " + t.getDisplayName() + " | " + t.getExpertise());
+        }
+
+        System.out.print("Enter Trainer ID: ");
+        int trainerId = Integer.parseInt(scanner.nextLine());
         System.out.print("Course Name: ");
         String name = scanner.nextLine();
 
@@ -268,20 +275,28 @@ public class Main {
         System.out.print("Duration (weeks): ");
         int duration = Integer.parseInt(scanner.nextLine());
 
-        courseService.addCourse(name, desc, duration);
-        System.out.println("Course added successfully.");
+        courseService.addCourse(name, desc, duration, trainerId);
+        System.out.println("Course added and assigned to trainer successfully.");
     }
 
     private static void viewCourses() {
+
         System.out.println("\n--- Courses ---");
-        courseService.listCourses().forEach(c ->
-                System.out.println(
-                        c.getId() + " | " +
-                                c.getCourseName() +
-                                " | Active: " + c.isActive()
-                )
-        );
+
+        for (var course : courseService.listCourses()) {
+
+            Trainer trainer =
+                    trainerService.getTrainerById(course.getTrainerId());
+
+            System.out.println(
+                    course.getId() + " | " +
+                            course.getCourseName() +
+                            " | Trainer: " + trainer.getDisplayName() +
+                            " | Active: " + course.isActive()
+            );
+        }
     }
+
 
     private static void activateCourse() {
         System.out.print("Enter Course ID: ");
@@ -390,12 +405,13 @@ public class Main {
         studentService.addStudent("Rahul", "Patil", "Java"); // without email
         studentService.addStudent("Sneha", "Kulkarni", "sneha@gmail.com", "Node");
 
-        courseService.addCourse("Core Java", "Java fundamentals and OOP", 8);
-        courseService.addCourse("DSA", "Data Structures and Algorithms", 10);
-        courseService.addCourse("Node", "JavaScript, NodeJS1", 6);
+        courseService.addCourse("Core Java", "Java fundamentals and OOP", 8, 4001);
+        courseService.addCourse("DSA", "Data Structures and Algorithms", 10, 4002);
+        courseService.addCourse("Node", "JavaScript, NodeJS1", 6, 4003);
 
         trainerService.addTrainer("Ankit", "Mehta", "ankit@airtribe.com", "Core Java");
         trainerService.addTrainer("Pooja", "Desai", "pooja@airtribe.com", "DSA");
+        trainerService.addTrainer("Ragini", "Joshi", "ragini@airtribe.com", "JavaScript");
     }
 
 }
