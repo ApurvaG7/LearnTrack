@@ -5,13 +5,13 @@ The project demonstrates OOP concepts, clean architecture, and in-memory data ha
 
 👨‍🎓 Student Management
 
-Add student (with or without email)
+* Add student (with or without email)
 
-View all students
+* View all students
 
-Search student by ID
+* Search student by ID
 
-Update student details
+* Update student details
 
 Remove student
 
