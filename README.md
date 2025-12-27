@@ -43,3 +43,7 @@ The project demonstrates OOP concepts, clean architecture, and in-memory data ha
 2. Run Main.java
 3. Sample data is preloaded automatically
 4. Use menu options to explore features
+
+🧩 Class Diagram
+
+<img src="/Class%20Diagram.png" width=800>
