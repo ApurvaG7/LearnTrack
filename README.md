@@ -2,12 +2,17 @@ This is a menu-driven console application built using Core Java to manage Studen
 The project demonstrates OOP concepts, clean architecture, and in-memory data handling.
 
 🎯 Key Features
+
 👨‍🎓 Student Management
 
 Add student (with or without email)
+
 View all students
+
 Search student by ID
+
 Update student details
+
 Remove student
 
 📘 Course Management
